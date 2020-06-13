@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login"
+             x:Class="AppPa2.Views.PlacePage">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Places}">>
+            <Label Text="{Binding Id}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Tittle}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Url}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button
+                        BackgroundColor="DarkCyan"
+                        Command="{Binding LoginCommand}"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                        Text="LLamar al api rest"
+                        TextColor="Wheat">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppPa2.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace AppPa2
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new PlacePage();
         }
 
         protected override void OnStart()
